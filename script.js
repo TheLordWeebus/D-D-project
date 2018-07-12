@@ -80,7 +80,7 @@ function deadent() {
 	reset()
 	newWhin = newWin + 1
 	elementChange("win", newWin)
-	pathList.pop(topop) //Ran into error Pop function not working.
+	popfunc(pathvar,pathList) //Ran into error Pop function not working.
 }
 
 function secretClicked() {
@@ -126,3 +126,11 @@ function reset() {
 function logCLicked() {
 	log = "visible"
 }
+
+function popFunc(item, array){
+    var index = array.indexOf(item);
+    if (index > -1) {
+        array.splice(index, 1);
+    }
+    return array;
+} 

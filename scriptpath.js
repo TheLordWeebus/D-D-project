@@ -1,11 +1,10 @@
 var pathList = ["Orc","Event1",]
 var pathvar = 0
-var topop = 
 //Make list = number of paths
 
 function varfinder(){
-    topop = pathList.length - 1
-    pathfinder(topop)
+    pathvar = pathList[GetRandom(pathList.length)-1]
+    pathfinder(pathvar)
 }
 
 function pathfinder(x) {
