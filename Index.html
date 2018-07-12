@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript"src="scriptpath.js"></script>
+<script type="text/javascript"src="ScriptCon.js"></script>
+<script type="text/javascript"src="script.js"></script>
+<title style="text-align:center;">D&D Gamehub</title>
+<link rel="stylesheet" href="style.css"></link>
+</head>
+<body>
+
+<h1>Dungeon Quest 1</h1>
+<p>You have been summoned to this realm by mistake because people don't know why NOT to touch demonic stones<br><b>HUH DERIK!?</b><br><i>seriously.</i></p>
+<p><span class = quote><q>To touch or not to touch is not the question</q> when I said 'NO <bdo dir="rtl">'DERIK</bdo></span><p>
+<h2>Classes</h2>
+<button class=Log onclick="logClicked()">Log Book</button>
+<table>
+	<tr>
+		<th>ClassName</th>
+		<th>Strength</th>
+		<th>Agility</th>
+		<th>MagicPower</th>
+		<th>Distance</th>
+		<th>Power</th>
+	</tr>
+	<tr>
+		<td id='class1'><button onclick="classClicked()" onclick="elfClicked()">Elf</button></td>
+		<td>25</td>
+		<td>60</td>
+		<td>40</td>
+		<td>75</td>
+		<td>50</td>
+	</tr>
+		<tr>
+		<td  id='class2'><button onclick="classClicked()" onclick="dwarfClicked()">Dwarf</button></td>
+		<td>75</td>
+		<td>25</td>
+		<td>10</td>
+		<td>10</td>
+		<td>75</td>
+	</tr>
+		<tr>
+		<td id='class3'><button onclick="classClicked()" onclick="mageClicked()">Mage</button></td>
+		<td>5</td>
+		<td>20</td>
+		<td>100</td>
+		<td>100</td>
+		<td>25</td>
+	</tr>
+</table>
+
+<!--     Button     -->
+<button class='display' id='disp' onclick="displayClicked()">Display</button>
+<!--                -->
+
+<!--  Fightbuttons  -->
+<table class ='op'>
+	<tr>
+		<th id='fight'>
+			Fight
+		</th>
+		<th>
+			Items
+		</th>
+		<th>
+			<button id='flee' onclick="fleeClicked()">Flee</button>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<button id='enemy1' onclick="enemy1Clicked()">Enemy 1</button>
+			<p id='estat' >100hp 20dph </p>
+		</td>
+		<td>
+			<button id='item1' onclick="item1Clicked()">Item 1</button>
+		</td>
+	</tr>
+</table>
+<!--                -->
+<!--    Health      -->
+<table class="op">
+	<tr>
+		<th id='health'>
+			Health
+		</th>
+	</tr>
+</table>
+<!--                -->
+<!--   Win  Count   -->
+<table>
+	<th><button id='win' onclick="secretClicked()">Win Counter:</button></th>
+</table>
+<!--                -->
+<!-- Option buttons -->
+<p id='eventDesc'>This will change to show the path event and description</p>
+<table class ='op'>
+	<tr>
+		<th>
+			<button id='opOne' onclick="option1Clicked()">Option 1:</button></th>
+		</th>
+		<th>
+			<button id='opTwo' onclick="option2Clicked()">Option 2:</button></th>
+		</th>
+		<th>
+			<button id='opThree' onclick="option3Clicked()">Option 3:</button></th>
+		</th>
+		<th>
+			<button id='opFour' onclick="option4Clicked()">Option 4:</button></th>
+		</th>
+	</tr>
+</table>
+<!--                -->
+<!--     Logs       -->
+when "log" = "visible";
+	<p id=log> </p>
+</body>
+
+</html>
