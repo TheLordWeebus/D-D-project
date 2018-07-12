@@ -80,7 +80,7 @@ function deadent() {
 	reset()
 	newWhin = newWin + 1
 	elementChange("win", newWin)
-	pathList.pop(pathvar) //Ran into error Pop function not working.
+	pathList.pop(topop) //Ran into error Pop function not working.
 }
 
 function secretClicked() {
