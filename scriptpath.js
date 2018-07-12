@@ -3,7 +3,8 @@ var pathvar = 0
 //Make list = number of paths
 
 function varfinder(){
-    pathfinder(0)
+    pathvar = pathList[GetRandom(pathList.length)-1]
+    pathfinder(pathvar)
 }
 
 function pathfinder(x) {
