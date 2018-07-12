@@ -74,13 +74,15 @@ function deadchr() {
 	reset()
 	elementChange('health', 'Dead');
 	document.getElementById('disp').disabled = true
+	elementChange("log","log"+"This was the end of your journey ~GAME OVER~")
 }
 
 function deadent() {
 	reset()
 	newWhin = newWin + 1
 	elementChange("win", newWin)
-	popfunc(pathvar,pathList) //Ran into error Pop function not working.
+	pathList = popFunc(pathvar,pathList)
+	elementChange("log","log"+"You defeated it and carried along on your way.")
 }
 
 function secretClicked() {
@@ -89,23 +91,27 @@ function secretClicked() {
 } 
 
 function option1Clicked() {
-	pathfinder(pathvar)
 	reset()
+	elementChange("log","log"+"You decided it would be good to try to" + "opOne")
+	popFunc(pathvar,pathList)	
 }
 
 function option2Clicked() {
-	pathfinder(pathvar)
+	elementChange("log","log"+"You decided it would be good to try to" + "opTwo")
 	reset()
+	popFunc(pathvar,pathList)
 }
 
 function option3Clicked() {
-	pathfinder(pathvar)
+	elementChange("log","log"+"You decided it would be good to try to" + "opThree")
 	reset()
+	popFunc(pathvar,pathList)
 }
 
 function option4Clicked() {
+	elementChange("log","log"+"You decided it would be good to try to" + "opFour")
 	reset()
-	pathfinder(pathvar)
+	popFunc(pathvar,pathList)
 }
 
 function reset() {
@@ -127,10 +133,9 @@ function logCLicked() {
 	log = "visible"
 }
 
-function popFunc(item, array){
-    var index = array.indexOf(item);
-    if (index > -1) {
-        array.splice(index, 1);
-    }
-    return array;
+function popFunc(item, array) {
+	var index = array.indexOf(item);
+    var part1 = array.slice(0, index);
+    var part2 = array.slice(index + 1, array.length);
+    return part1.concat(part2);
 } 

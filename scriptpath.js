@@ -20,6 +20,7 @@ function pathOrc() {
     elementChange("enemy1", "Orc")
 	elementChange("item1", "Potion")
     elementChange("health", startH)
+    elementChangelog("log","log" + "You came across an Orc and it attacked you.")
 }
 
 function pathEvent1() {
@@ -28,4 +29,5 @@ function pathEvent1() {
     elementChange("opThree","Leave an offering then try to cross hoping it works")
     elementChange("opFour","Run around the bridge and through the river")
     elementChange("eventDesc","You wander across paths and lands until you come across a bridge where you seem unable to pass.")
+    elementChange("log","log"+"You wander across paths and lands until you come across a bridge where you seem unable to pass.")
 }
