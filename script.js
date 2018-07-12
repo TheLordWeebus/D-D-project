@@ -29,15 +29,15 @@ function item1Clicked() {
 }
 
 function enemy1Clicked() {
-	GetRandom(20)
-	if (strike < 7) {
-		(startEH = startEH - Attack)
-		var newstat = (startEH + 'hp 20dph')
-		elementChange("estat", newstat)
-	}
-	else {
+	strike = GetRandom(100)
+	if (strike < eChance) {
 		(startH = startH - 20)
 		elementChange("health", startH)
+	}
+	else {
+			(startEH = startEH - Attack)
+			var newstat = (startEH + 'hp 20dph')
+			elementChange("estat", newstat)
 	}
 	if (startH == 0) {
 		deadchr()
@@ -80,7 +80,7 @@ function deadent() {
 	reset()
 	newWhin = newWin + 1
 	elementChange("win", newWin)
-	pathList.pop(pathvar) //Ran into error Pop function not working.
+	pathList.pop(0)
 }
 
 function secretClicked() {
