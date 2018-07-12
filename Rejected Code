@@ -1,0 +1,2 @@
+    pathvar = pathList[GetRandom(pathList.length)-1]
+    pathfinder(pathvar)
