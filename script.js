@@ -6,15 +6,6 @@ var startH = 100
 var startEH = 100
 var charclass = "n/a"
 var logs = " "
-function displayClicked() {
-	varfinder()
-	 permit("enemy1")
-	 permit("item1")
-	 permit("opOne")
-	 permit("opTwo")
-	 permit("opThree")
-	 permit("opFour")
-}
 
 function GetRandom(n){
 	return Math.ceil(Math.random() * n); 
@@ -115,8 +106,14 @@ function option4Clicked() {
 	popFunc(pathvar,pathList)
 }
 
-function permit(item){
-	document.getElementById(item).disabled = false
+function displayClicked() {
+	varfinder()
+	 permit("enemy1")
+	 permit("item1")
+	 permit("opOne")
+	 permit("opTwo")
+	 permit("opThree")
+	 permit("opFour")
 }
 
 function reset() {
@@ -149,4 +146,8 @@ function popFunc(item, array) {
 
 function disable(item) {
 	document.getElementById(item).disabled = true
+}
+
+function permit(item){
+	document.getElementById(item).disabled = false
 }
