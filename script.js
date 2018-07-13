@@ -26,7 +26,7 @@ function item1Clicked() {
 }
 
 function enemy1Clicked() {
-	Enemy()
+	settings.Enemy()
 	strike = GetRandom(100)
 	if (strike <= eChance) {
 		(startH = startH - 20)
@@ -53,12 +53,12 @@ function classClicked() {
 
 function elfClicked() {
 	Classes("Elf");
-	classClicked()
+	settings.classClicked()
 }
 
 function dwarfClicked() {
 	Classes("Dwarf");
-	classClicked()
+	settings.classClicked()
 }
 
 function mageClicked() {
