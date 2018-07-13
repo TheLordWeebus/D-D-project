@@ -4,8 +4,8 @@ var potion = 0
 var maxH = 100
 var startH = 100
 var startEH = 100
-var log = "hidden"
 var charclass = "n/a"
+var logs = " "
 function displayClicked() {
 	varfinder()
 }
@@ -74,7 +74,8 @@ function deadchr() {
 	reset()
 	elementChange('health', 'Dead');
 	document.getElementById('disp').disabled = true
-	elementChange("log", logs + "This was the end of your journey ~GAME OVER~")
+	logs = logs + "This was the end of your journey ~GAME OVER~"
+	elementChange("log", logs)
 }
 
 function deadent() {
@@ -82,7 +83,8 @@ function deadent() {
 	newWhin = newWin + 1
 	elementChange("win", newWin)
 	pathList = popFunc(pathvar,pathList)
-	elementChange("log", logs + "You defeated it and carried along on your way.")
+	logs = logs + "You defeated it and carried along on your way."
+	elementChange("log", logs)
 }
 
 function secretClicked() {
@@ -91,25 +93,29 @@ function secretClicked() {
 } 
 
 function option1Clicked() {
+	logs = logs + "You decided it would be good to try to" + "opOne"
+	elementChange("log", logs)
 	reset()
-	elementChange("log", logs + "You decided it would be good to try to" + "opOne")
 	popFunc(pathvar,pathList)	
 }
 
 function option2Clicked() {
-	elementChange("log", logs + "You decided it would be good to try to" + "opTwo")
+	logs = logs + "You decided it would be good to try to" + "opTwo"
+	elementChange("log", logs)
 	reset()
 	popFunc(pathvar,pathList)
 }
 
 function option3Clicked() {
-	elementChange("log", logs + "You decided it would be good to try to" + "opThree")
+	logs = logs + "You decided it would be good to try to" + "opThree"
+	elementChange("log", logs)
 	reset()
 	popFunc(pathvar,pathList)
 }
 
 function option4Clicked() {
-	elementChange("log", logs + "You decided it would be good to try to" + "opFour")
+	logs = logs + "You decided it would be good to try to" + "opFour"
+	elementChange("log", logs)
 	reset()
 	popFunc(pathvar,pathList)
 }
@@ -129,10 +135,6 @@ function reset() {
 	potion = 0
 }
 
-function logCLicked() {
-	log = "visible"
-}
-
 function popFunc(item, array) {
 	var index = array.indexOf(item);
     var part1 = array.slice(0, index);
@@ -140,4 +142,3 @@ function popFunc(item, array) {
     return part1.concat(part2);
 } 
 
-var logs = log
