@@ -15,6 +15,7 @@ logs = logs + "You decided it would be good to try to" + "opOne"
 logs = logs + "You decided it would be good to try to" + "opTwo"
 logs = logs + "You decided it would be good to try to" + "opThree"
 logs = logs + "You decided it would be good to try to" + "opFour"
+logs = logs + "You came across an Orc and it attacked you. "
 logs = logs + "You wander across paths and lands until you come across a bridge where you seem unable to pass. "
 logs = logs + "Whilst walking the forest path you are ambushed from the trees by a spider."
 elementChange("log", logs)

@@ -17,7 +17,6 @@ function pathOrc() {
     elementChange("enemy1", "Orc")
 	elementChange("item1", "Potion")
     elementChange("health", startH)
-    logs = logs + "You came across an Orc and it attacked you. "
 }
 
 function pathEvent1() {
