@@ -30,7 +30,7 @@ function item1Clicked() {
 
 function enemy1Clicked() {
 	strike = GetRandom(100)
-	if (strike < eChance) {
+	if (strike <= eChance) {
 		(startH = startH - 20)
 		elementChange("health", startH)
 	}
@@ -74,7 +74,7 @@ function deadchr() {
 	reset()
 	elementChange('health', 'Dead');
 	document.getElementById('disp').disabled = true
-	elementChange("log","log"+"This was the end of your journey ~GAME OVER~")
+	elementChange("log", logs + "This was the end of your journey ~GAME OVER~")
 }
 
 function deadent() {
@@ -82,7 +82,7 @@ function deadent() {
 	newWhin = newWin + 1
 	elementChange("win", newWin)
 	pathList = popFunc(pathvar,pathList)
-	elementChange("log","log"+"You defeated it and carried along on your way.")
+	elementChange("log", logs + "You defeated it and carried along on your way.")
 }
 
 function secretClicked() {
@@ -92,24 +92,24 @@ function secretClicked() {
 
 function option1Clicked() {
 	reset()
-	elementChange("log","log"+"You decided it would be good to try to" + "opOne")
+	elementChange("log", logs + "You decided it would be good to try to" + "opOne")
 	popFunc(pathvar,pathList)	
 }
 
 function option2Clicked() {
-	elementChange("log","log"+"You decided it would be good to try to" + "opTwo")
+	elementChange("log", logs + "You decided it would be good to try to" + "opTwo")
 	reset()
 	popFunc(pathvar,pathList)
 }
 
 function option3Clicked() {
-	elementChange("log","log"+"You decided it would be good to try to" + "opThree")
+	elementChange("log", logs + "You decided it would be good to try to" + "opThree")
 	reset()
 	popFunc(pathvar,pathList)
 }
 
 function option4Clicked() {
-	elementChange("log","log"+"You decided it would be good to try to" + "opFour")
+	elementChange("log", logs + "You decided it would be good to try to" + "opFour")
 	reset()
 	popFunc(pathvar,pathList)
 }
@@ -139,3 +139,5 @@ function popFunc(item, array) {
     var part2 = array.slice(index + 1, array.length);
     return part1.concat(part2);
 } 
+
+var logs = log

@@ -8,7 +8,9 @@ var eChance = 20
 var settings = {
     Enemy() {
         Attack = 20,
-        eChance; (Distance/Agility)*10
+        eChance; (Distance-(100 - Agility))*10
+        if (eChance < 0) {eChance*-1}
+
     },
     Classes(x) {
         if (x == "Elf") {
