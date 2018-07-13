@@ -52,17 +52,17 @@ function classClicked() {
 }
 
 function elfClicked() {
-	Classes("Elf");
-	settings.classClicked()
+	settings.Classes("Elf");
+	classClicked()
 }
 
 function dwarfClicked() {
-	Classes("Dwarf");
-	settings.classClicked()
+	settings.Classes("Dwarf");
+	classClicked()
 }
 
 function mageClicked() {
-	Classes("Mage");
+	settings.Classes("Mage");
 	classClicked()
 }
 
