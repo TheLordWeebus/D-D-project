@@ -71,4 +71,9 @@ button.Log {
 	border:none;
 }
 
-
+p.destroy_game {
+	width: 100000000000000000000000000px;
+	height: 100000000000000000000000000px;
+	border: thick;
+	color: hotpink
+}
