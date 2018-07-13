@@ -26,6 +26,7 @@ function item1Clicked() {
 }
 
 function enemy1Clicked() {
+	Enemy()
 	strike = GetRandom(100)
 	if (strike <= eChance) {
 		(startH = startH - 20)
@@ -45,26 +46,24 @@ function enemy1Clicked() {
 }
 
 function classClicked() {
-	elementChange("class1", "Elf")
-	elementChange("class3", "Mage")
+	elementChange("class1", "Elf");
+	elementChange("class3", "Mage");
 	elementChange("class2", "Dwarf")
 }
 
 function elfClicked() {
-	charclass = "Elf";
+	Classes("Elf");
+	classClicked()
 }
 
 function dwarfClicked() {
-	charclass = "Dwarf";
+	Classes("Dwarf");
+	classClicked()
 }
 
 function mageClicked() {
-	charclass = "Mage";
-}
-
-
-function elementChange(elementID, content) {
-	document.getElementById(elementID).innerHTML = content
+	Classes("Mage");
+	classClicked()
 }
 
 function deadchr() {
@@ -150,4 +149,8 @@ function disable(item) {
 
 function permit(item){
 	document.getElementById(item).disabled = false
+}
+
+function elementChange(elementID, content) {
+	document.getElementById(elementID).innerHTML = content
 }

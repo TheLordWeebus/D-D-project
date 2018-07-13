@@ -19,7 +19,6 @@ var charclass = 'n/a'
 //settings
 var settings = {
     Enemy() {
-        Attack = 20,
         eChance; (pDistance-(100 - pAgility))*10
         if (eChance < 0) {eChance*-1}
 
@@ -37,14 +36,14 @@ var settings = {
 } 
 
 function Playersetup(x,y,z,a,b){
-    elementChange("pS",x)
+    elementChange("ps",x)
     pStrength = parseInt(x)
-    elementChange("pA",y)
+    elementChange("pa",y)
     pAgility = parseInt(y)
-    elementChange("pM",z)
+    elementChange("pm",z)
     pMagicPower = parseInt(z)
-    elementChange("pD",a)
+    elementChange("pd",a)
     pDistance = parseInt(a)
-    elementChange("pP",b)
+    elementChange("pp",b)
     pPower = parseInt(b)
 }
