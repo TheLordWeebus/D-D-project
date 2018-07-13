@@ -32,7 +32,7 @@ var settings = {
     "Player": {
         Health: 100,
         MaxHp: 100,
-        Attack : (Strength*MagicPower)/Power
+        Attack : (pStrength*pMagicPower)/pPower
     }
 } 
 
