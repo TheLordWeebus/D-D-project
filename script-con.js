@@ -25,9 +25,9 @@ var settings = {
 
     },
     Classes(x) {
-        if (x == "Elf") { Playersetup(25,60,40,75,50) };
-        if (x == "Dwarf") { Playersetup(75,25,20,10,75) };
-        if (x == "Mage") { Playersetup(5,20,100,100,25) }
+        if (x == "Elf") { Playersetup("25","60","40","75","50") };
+        if (x == "Dwarf") { Playersetup("75","25","20","10","75") };
+        if (x == "Mage") { Playersetup("5","20","100","100","25") }
     },
     "Player": {
         Health: 100,
@@ -38,13 +38,13 @@ var settings = {
 
 function Playersetup(x,y,z,a,b){
     elementChange("pS",x)
-    pStrength = x
+    pStrength = parseInt(x)
     elementChange("pA",y)
-    pAgility = y
+    pAgility = parseInt(y)
     elementChange("pM",z)
-    pMagicPower = z
+    pMagicPower = parseInt(z)
     elementChange("pD",a)
-    pDistance = a
+    pDistance = parseInt(a)
     elementChange("pP",b)
-    pPower = b
+    pPower = parseInt(b)
 }
