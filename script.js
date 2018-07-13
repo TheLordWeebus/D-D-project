@@ -51,15 +51,15 @@ function classClicked() {
 }
 
 function elfClicked() {
-	var charclass = "Elf";
+	charclass = "Elf";
 }
 
 function dwarfClicked() {
-	var charclass = "Dwarf";
+	charclass = "Dwarf";
 }
 
 function mageClicked() {
-	var charclass = "Mage";
+	charclass = "Mage";
 }
 
 
