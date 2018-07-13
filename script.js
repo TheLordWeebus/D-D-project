@@ -8,6 +8,12 @@ var charclass = "n/a"
 var logs = " "
 function displayClicked() {
 	varfinder()
+	 permit("enemy1")
+	 permit("item1")
+	 permit("opOne")
+	 permit("opTwo")
+	 permit("opThree")
+	 permit("opFour")
 }
 
 function GetRandom(n){
@@ -107,6 +113,10 @@ function option3Clicked() {
 function option4Clicked() {
 	reset()
 	popFunc(pathvar,pathList)
+}
+
+function permit(item){
+	document.getElementById(item).disabled = false
 }
 
 function reset() {
