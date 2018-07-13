@@ -18,7 +18,6 @@ function pathOrc() {
 	elementChange("item1", "Potion")
     elementChange("health", startH)
     logs = logs + "You came across an Orc and it attacked you. "
-    elementChange("log", logs)
 }
 
 function pathEvent1() {
@@ -27,14 +26,10 @@ function pathEvent1() {
     elementChange("opThree","Leave an offering then try to cross hoping it works ")
     elementChange("opFour","Run around the bridge and through the river ")
     elementChange("eventDesc","You wander across paths and lands until you come across a bridge where you seem unable to pass. ")
-    logs = logs + "You wander across paths and lands until you come across a bridge where you seem unable to pass. "
-    elementChange("log", logs)
 }
 
 function pathSpider() {
     elementChange("enemy1","Spider")
     elementChange("item1","Potion")
     elementChange("health",startH)
-    logs = logs + "Whilst walking the forest path you are ambushed from the trees by a spider."
-    elementChange("log", logs)
 }

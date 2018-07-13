@@ -73,9 +73,7 @@ function elementChange(elementID, content) {
 function deadchr() {
 	reset()
 	elementChange('health', 'Dead');
-	document.getElementById('disp').disabled = true
-	logs = logs + "This was the end of your journey ~GAME OVER~"
-	elementChange("log", logs)
+	disable("disp")
 }
 
 function deadent() {
@@ -83,39 +81,30 @@ function deadent() {
 	newWhin = newWin + 1
 	elementChange("win", newWin)
 	pathList = popFunc(pathvar,pathList)
-	logs = logs + "You defeated it and carried along on your way."
-	elementChange("log", logs)
 }
 
 function secretClicked() {
 	elementChange("win", "Win Counter: Derek")
 	elementChange("eventDesc","DEREK WHY DID YOU ADD THIS TO THE WIN COUNT?! Can't you get anything right?")
+	disable("win")
 } 
 
 function option1Clicked() {
-	logs = logs + "You decided it would be good to try to" + "opOne"
-	elementChange("log", logs)
 	reset()
 	popFunc(pathvar,pathList)	
 }
 
 function option2Clicked() {
-	logs = logs + "You decided it would be good to try to" + "opTwo"
-	elementChange("log", logs)
 	reset()
 	popFunc(pathvar,pathList)
 }
 
 function option3Clicked() {
-	logs = logs + "You decided it would be good to try to" + "opThree"
-	elementChange("log", logs)
 	reset()
 	popFunc(pathvar,pathList)
 }
 
 function option4Clicked() {
-	logs = logs + "You decided it would be good to try to" + "opFour"
-	elementChange("log", logs)
 	reset()
 	popFunc(pathvar,pathList)
 }
@@ -130,6 +119,12 @@ function reset() {
 	elementChange("opThree","Option 3")
 	elementChange("opFour","Option 4")
 	elementChange("eventDesc","Event Description")
+	disable("enemy1")
+	disable("item1")
+	disable("opOne")
+	disable("opTwo")
+	disable("opThree")
+	disable("opFour")
 	startEH = 100
 	startH = 100
 	potion = 0
@@ -142,3 +137,6 @@ function popFunc(item, array) {
     return part1.concat(part2);
 } 
 
+function disable(item) {
+	document.getElementById(item).disabled = true
+}
